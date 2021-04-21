@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    日期时间(默认): <span th:text="${date}"></span> <br>
+    日期时间: <span th:text="${#dates.format(date,'yyyy-MM-dd HH:mm:ss')}"></span> <br>
+
+    <hr>
+
+    数值(默认): <span th:text="${num}"></span> <br>
+    数值: <span th:text="${#numbers.formatDecimal(num,8,2)}"></span> <br>
+
+    <hr>
+
+    大字符串(默认): <span th:text="${str}"></span> <br>
+    判断字符串是否为空: <span th:unless="${#strings.isEmpty(str)}"> 字符串不为空 </span> <br>
+    截取显示: <p th:text="${#strings.abbreviate(str,30)}"></p>
+    截取内容: <p th:text="${#strings.substring(str,0,30)}"></p>
+
+</body>
+</html>

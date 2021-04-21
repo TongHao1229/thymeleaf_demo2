@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- if语句 -->
+    <h1 th:if="${flag == 'ok'}">
+        返回结果成功
+    </h1>
+
+    <h1 th:unless="${flag == 'ok'}">
+        返回结果失败
+    </h1>
+
+    <h1 th:if="${isRight}">
+        结果正确
+    </h1>
+
+    <div th:switch="${num}">
+        <p th:case="1"> 当前值是1 </p>
+        <p th:case="2"> 当前值是2 </p>
+        <p th:case="3"> 当前值是3 </p>
+    </div>
+
+</body>
+</html>

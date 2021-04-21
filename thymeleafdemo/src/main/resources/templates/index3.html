@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <table width="400" text-align="center" style="margin:0 auto">
+        <tr>
+            <th>编号</th>
+            <th>ID</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>地址</th>
+        </tr>
+        <tr th:each="user,iterStat : ${list}">
+            <td th:text="${iterStat.count}"></td>
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.age}"></td>
+            <td th:text="${user.address}"></td>
+        </tr>
+
+
+    </table>
+
+
+</body>
+</html>

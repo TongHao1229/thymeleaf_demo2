@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>这个是页面的内容</h1>
+    <h2>字体颜色：外标签的，背景颜色: 引入的fragment的</h2>
+
+    <!-- 插入 -->
+    <div style="color:bisque" th:insert="~{dir/footer :: footContent}">
+    </div>
+
+    <!-- 替换 -->
+    <div style="color:bisque" th:replace="~{dir/footer :: footContent}">
+    </div>
+
+    <!-- 包含 -->
+    <div style="color:bisque" th:include="~{dir/footer :: footContent}">
+    </div>
+
+</body>
+</html>

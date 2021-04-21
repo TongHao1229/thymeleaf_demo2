@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div th:text="${offcn} + '最爱大宝剑'"></div>
+
+    <div th:text="|浴皇大帝${offcn}是也|"></div>
+
+    浴皇大帝<input type="text" name="compy" th:value="${offcn}"><br>
+
+</body>
+</html>
